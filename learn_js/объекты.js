@@ -115,7 +115,7 @@ let id1 = Symbol("id");  //создание символов
 let id2 = Symbol("id");  // разные символы, то что описание разное - не важно
 console.log(id1.toString());  //Symbol(id)
 console.log(id1.description);  //id
-// по умолчанию символы скрыты и не будут вызываться в обычных обращениях , но при этом методы клонирования, типа assign, символы учтутся
+// по умолчанию символы скрыты и не будут вызываться в обычных обращениях , но при этом методы клонирования, типа ASSIGN, символы учтутся
 
 // читаем символ из глобального реестра и записываем его в переменную
 let id = Symbol.for("id"); // если символа не существует, он будет создан
@@ -130,7 +130,6 @@ let sym2 = Symbol.for("id");
 // получаем имя по символу
 alert( Symbol.keyFor(sym) ); // name
 alert( Symbol.keyFor(sym2) ); // id
-
 
 myDog[id1] = 1;
 console.log(myDog[id1]);
@@ -158,7 +157,7 @@ let prices = {
   meat: 4,
 };
 let doublePrices = Object.fromEntries(
-  // преобразовать в массив, затем map, затем fromEntries обратно объект
+  // преобразовать в массив, затем map, затем fromEntries обратно объект. [key, value]- деструктизируем массивы
   Object.entries(prices).map(([key, value]) => [key, value * 2])
 );
 alert(doublePrices.meat); // 8

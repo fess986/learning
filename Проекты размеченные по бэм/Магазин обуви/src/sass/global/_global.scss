@@ -1,0 +1,127 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.wrapper1 {
+  // color: green;
+  // background-color: green;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+
+  /* убирает пробелы, не дает переносить текст на другие строки */
+  clip-path: inset(100%);
+  /* определяет область отображения текста по шаблону. совместимость средняя */
+  clip: rect(0 0 0 0);
+  /* определяет область отображения текста по прямоугольнику. совместимость высокая */
+  overflow: hidden;
+  /* определяет что делать с элементами, которые не вмещаются в блок: показать/скрыть/скролл. можно применять к блокам, флексам и гридам */
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  min-height: 52px;
+  // border: 2px solid $brown_border;
+  // color: $brown_border;
+  text-transform: uppercase;
+  background-color: $white;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    // background-color: $brown_border;
+  }
+
+  &:active {
+    color: rgb(255 255 255 / 30%);
+    // background-color: $brown_border;
+  }
+}
+
+
+// настройки предыдущего проекта
+
+// .page__body {
+//   //position: relative;
+//   min-width: 320px; //не даем сжать страницу меньше 320, чтобы не появилась прокрутка
+//   //width: 320px;
+//   min-height: 100%;
+//   font-family:
+//     "Open Sans",
+//     "Arial",
+//     sans-serif;
+//   font-size: 17px;
+//   line-height: 24px;
+//   font-weight: normal;
+//   color: #000000;
+//   //background-color: red;
+
+//   //@media (min-width : $tablet-width) and (max-width : $desktop-width) {
+//   @media (min-width: $tablet-width) {
+//     //width: 768px; //либо авто, если макет резиновый
+//     //background-color: green;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     width: 1150px;
+//     //background-color: blue;
+//   }
+// }
+
+// .container {
+//   margin: 0 auto;
+//   padding: 0 30px;
+
+//   @media (min-width: $tablet-width) {
+//     margin: 0 auto;
+//     padding: 0 50px;
+//     // outline: 2px red solid;
+//     // outline-offset: -52px;
+//   }
+// }
+
+
+
+// h2 {
+//   @include h2;
+// }
+
+// h3 {
+//   @include h3;
+// }
+
+// h4 {
+//   @include h4;
+// }
+
+// h5 {
+//   @include h5;
+// }
+
+// p {
+//   @include p;
+// }
+
+// a {
+//   @include ul-clear;
+
+//   color: inherit;
+// }
+
+

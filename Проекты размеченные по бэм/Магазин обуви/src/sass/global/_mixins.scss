@@ -1,0 +1,126 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// миксины проекта мишки
+
+// @mixin ul-clear {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+//   text-decoration: none;
+// }
+
+// @mixin h2 {
+//   font-family: "Open Sans",
+//       "Arial",
+//       sans-serif;
+//   margin: 0;
+//   color: $black;
+//   font-size: 27px;
+//   line-height: 30px;
+//   font-weight: 700;
+
+//   @media (min-width: $tablet-width) {
+//     font-size: 43px;
+//     line-height: 50px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     font-size: 53px;
+//     line-height: 57px;
+//   }
+// }
+
+// @mixin h3 {
+//   font-family: "Open Sans",
+//       "Arial",
+//       sans-serif;
+//   margin: 0;
+//   color: $black;
+//   font-size: 25px;
+//   line-height: 30px;
+//   font-weight: 700;
+
+//   @media (min-width: $tablet-width) {
+//     font-size: 43px;
+//     line-height: 50px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     font-size: 53px;
+//     line-height: 57px;
+//   }
+// }
+
+// @mixin h4 {
+//   font-family: "Open Sans",
+//       "Arial",
+//       sans-serif;
+//   margin: 0;
+//   color: $black;
+//   font-size: 17px;
+//   line-height: 20px;
+//   font-weight: bold;
+
+//   @media (min-width: $tablet-width) {
+//     font-size: 20px;
+//     line-height: 24px;
+//   }
+// }
+
+// @mixin h5 {
+//   font-family: "Open Sans",
+//       "Arial",
+//       sans-serif;
+//   margin: 0;
+//   color: $black;
+//   font-size: 18px;
+//   line-height: 30px;
+//   font-weight: bold;
+
+//   @media (min-width: $tablet-width) {
+//     font-size: 43px;
+//     line-height: 50px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     font-size: 53px;
+//     line-height: 57px;
+//   }
+// }
+
+// @mixin p {
+//   font-family: "Open Sans",
+//       "Arial",
+//       sans-serif;
+//   margin: 0;
+//   color: $brown_border;
+//   font-size: 15px;
+//   line-height: 24px;
+//   font-weight: 400;
+
+//   @media (min-width: $tablet-width) {
+//     font-size: 17px;
+//     line-height: 30px;
+//   }
+
+// }
+
+// @mixin outline($color: blue(110, 110, 91)) {
+//   outline: 2px $color solid;
+//   outline-offset: -2px;
+// }

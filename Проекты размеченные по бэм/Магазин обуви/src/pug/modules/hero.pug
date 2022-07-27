@@ -1,0 +1,41 @@
+mixin bulet(number, isActive)
+  if isActive
+    li.slider__bullet
+                button.slider__bullet-button.slider__bullet-button--active
+                  span.visually-hidden= number
+  else
+    li.slider__bullet
+                button.slider__bullet-button
+                  span.visually-hidden= number
+
+section.hero
+        .container
+          .hero__slider.slider
+            ul.slider__list
+              li.slider__item
+                h2.slider__title Бестселлер для самых умных и продвинутых
+                p.slider__text Книга научит вас писать, читать, говорить по-новому. Авторы на конкретных примерах показывают, что      такое хорошо и что такое плохо в информационных, рекламных, журналистских и публицистических текстах.
+                a.slider__link(href="#") Подробнее
+                img.slider__img(src=`${pathContentImg}hero-slider-1@1x.png` srcset=`${pathContentImg}hero-slider-1@2x.png 2x` width="400" height="633" alt="Картинка книга Пиши, сокращай")
+            ul.slider__bullets
+              +bulet('Первый слайд', true)
+              +bulet('Второй слайд')
+              +bulet('Третий слайд')
+            ul.slider__arrows
+              li.slider__arrow
+                button.slider__arrow-button.slider__arrow-button--prev
+                  span.visually-hidden Переключить на предыдущий слайд
+                  .
+                    <svg class="slider__icon-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none"                      xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M1.7059 5.99998L1.35235 5.64643L0.998795 5.99998L1.35235 6.35354L1.7059 5.99998ZM6.29353 0.705254L1.35235 5.64643L2.05946 6.35354L7.00063 1.41236L6.29353 0.705254ZM1.35235 6.35354L6.29353 11.2947L7.00063 10.5876L2.05946 5.64643L1.35235 6.35354Z"
+                    fill="#3971FF" />
+                    </svg>
+              li.slider__arrow
+                button.slider__arrow-button.slider__arrow-button--next
+                  span.visually-hidden Переключить на следующий слайд
+                  .
+                    <svg class="slider__icon-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none"                        xmlns="http://www.w3.org/2000/svg">                      <path
+                    d="M1.7059 5.99998L1.35235 5.64643L0.998795 5.99998L1.35235 6.35354L1.7059 5.99998ZM6.29353 0.705254L1.35235 5.64643L2.05946 6.35354L7.00063 1.41236L6.29353 0.705254ZM1.35235 6.35354L6.29353 11.2947L7.00063 10.5876L2.05946 5.64643L1.35235 6.35354Z"
+                    fill="#3971FF" />
+                    </svg>

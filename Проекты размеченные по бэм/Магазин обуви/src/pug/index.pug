@@ -1,0 +1,218 @@
+extends layout/layout
+
+append variables
+  - var title = "Главная страница"
+  - var pageClass = "index-page"
+  - var userLogin = false
+
+block content
+  header.header.container
+    nav.navigation.navigation--wrapper
+      a.logo(href="#" )
+        img.logo__img(height="40px" width="105px" title="логотип" alt="логотип")
+      ul.site-navigation
+        li.site-navigation__item.site-navigation__item--active
+          a.site-navigation__link.site-navigation__link--active Обувь
+        li.site-navigation__item
+          a.site-navigation__link Новинки
+        li.site-navigation__item
+          a.site-navigation__link Мужчинам
+        li.site-navigation__item
+          a.site-navigation__link Женщинам
+        li.site-navigation__item
+          a.site-navigation__link Детям
+        li.site-navigation__item
+          a.site-navigation__link.site-navigation__link--important Sale
+        li.site-navigation__item
+          a.site-navigation__link Блог
+      ul.user-navigation
+        li.user-navigation__item
+          a.site-navigation__link Войти
+        li.user-navigation__item
+          a.site-navigation__link Избранное
+        li.user-navigation__item
+          a.site-navigation__link Корзина
+    section.header-hero.header-hero--wrapper
+      h2.header-hero__title Большая распродажа
+      p.header-hero__text Скидки до 70% на коллекцию демисезонной обуви
+      a.header-hero__button.button__ref(href="#") Смотреть каталог
+  main.main
+    h1.visually-hidden Магазин обуви
+    section.new-collection.container
+      .new-collection--wrapper
+        h2.new-collection__title Новая коллекция
+        a.new-collection__reference(href='#') Смотреть всё
+      ul.new-collection__list.new-collection__list--wrapper
+        li.card
+          img.card__photo(src="" title="Фото Туфли Shein" height="300px" width="275px")
+          .card--wrapper
+            p.card__name Туфли Shein
+            p.card__cost 17 500 ₽
+          .card--wrapper
+            a.card__reference.button__ref(href="#") Подробнее
+            button.button.card__button.card__button--cart В корзину
+        li.card
+          img.card__photo(src="" title="Фото Мюли Grace" height="300px" width="275px")
+          .card--wrapper
+            p.card__name Мюли Grace
+            p.card__cost 15 000 ₽
+          .card--wrapper
+            a.card__reference.button__ref(href="#") Подробнее
+            button.button.card__button.card__button--cart В корзину
+        li.card
+          img.card__photo(src="" title="Фото Кроссовки Brand" height="300px" width="275px")
+          .card--wrapper
+            p.card__name Кроссовки Brand
+            p.card__cost 9 500 ₽
+          .card--wrapper
+            a.card__reference.button__ref(href="#") Подробнее
+            button.button.card__button.card__button--cart(type="button") В корзину
+        li.card
+          img.card__photo(src="" title="Фото Туфли Shein" height="300px" width="275px")
+          .card--wrapper
+            p.card__name Ботинки Kelly
+            p.card__cost 18 500 ₽
+          .card--wrapper
+            a.card__reference.button__ref(href="#") Подробнее
+            button.button.card__button.card__button--cart В корзину
+    article.blog.container
+      header.blog--wrapper
+        h2.blog__title Блог
+        a.blog__reference(href='#') Все статьи
+      ul.blog__list.blog__list--wrapper
+        li.Blog__article.article
+          img.article__image(src="" width="380px" height="233px" title="Фото уход за обувью")
+          h3.article__title Как ухаживать за кожаной обувью
+          p.article__description Обувь из натуральной кожи практичная, красивая и долговечная. Благодаря материалу, в ней тепло зимой и не жарком летом. Чтобы кожаная обувь прослужила вам ни один год, за ней необходимо правильно и своевременно ухаживать.
+          a.article__button.button__ref(href="#") Читать статью
+        li.Blog__article.article
+          img.article__image(src="" width="380px" height="233px" title="Фото выбор обуви")
+          h3.article__title Как выбрать обувь в 2021
+          p.article__description Стилист и ведущая программы “Все о моде” Ева Миллер рассказала о трендах обуви этого года. Современная мода удивляет многообразием формы и цветовой гаммы, а ключевым трендом является комфорт, удобство и лаконичность.
+          a.article__button.button__ref(href="#") Читать статью
+        li.Blog__article.article
+          img.article__image(src="" width="380px" height="233px" title="Фото выбор кедов")
+          h3.article__title Как правильно выбирать кеды
+          p.article__description Кеды - одна их самых популярных моделей обуви уже не первый сезон. Их можно носить с любой одеждой: платьем, костюмом, джинсами и т.д. Такую обувь любят и мужчины и женщины и дети. Рассказываем, как выбрать качественные кеды.
+          a.article__button.button__ref(href="#") Читать статью
+    section.reviews.container
+      header.reviews--wrapper
+        h2.reviews__title Новая коллекция
+        a.reviews__reference(href='#') Смотреть всё
+      ul.reviews__list.reviews__list--wrapper
+        li.review.review--wrapper
+          .review-author
+          <!-- посмотреть как лучше назвать-->
+            .review-author--wrapper
+              img.review-author__image(src="" width="40px" height="40px" title="Аватарка Валерии")
+              p.review-author__name Валерия
+            p.review-aunhor__date 28.06.2021
+          .review__description Очень любим магазин Edison, покупаем тут обувь всем членам семьи. Отличное цена и качество, только оригиналы. Обменять неподошедший размер тоже не проблема. Спасибо, любимый магазин Edison!
+        li.review.review--wrapper
+          .review-author
+          <!-- посмотреть как лучше назвать-->
+            .review-author--wrapper
+              img.review-author__image(src="" width="40px" height="40px" title="Аватарка Сергея")
+              p.review-author__name Сергей
+            p.review-aunhor__date 12.06.2021
+          .review__description Покупаем детям обувь только в Edison. Дочки бегают везде, лужи, сугробы, грязь – обуви ничего не страшно. Когда становится малой, отдаем племянникам, потому что вся обувь выглядит как новая, все довольны.
+        li.review.review--wrapper
+          .review-author
+          <!-- посмотреть как лучше назвать-->
+            .review-author--wrapper
+              img.review-author__image(src="" width="40px" height="40px" title="Аватарка Елены")
+              p.review-author__name Елена
+            p.review-aunhor__date 05.05.2021
+          .review__description Впервые узнала об Edison от стилиста, она всегда покупает здесь обувь для клиентов и себе. Качество отличное, оригинальная обувь от известных брендов, причем цена меньше, чем на официальных сайтах.
+    footer.footer.footer--wrapper
+      .footer-information--wrapper
+        .contacts
+          a.logo(href="#" )
+            img.logo__img(height="40px" width="105px" title="логотип" alt="логотип")
+          p.contacts__telephone 8 (800) 999 55 22
+          p.contacts__e-mail info@edisonshoes.com
+          address .contacts__adress Санкт-Петербург, ул. Набережная, д. 40
+        ul.footer-nav__list каталог
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Новинки
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Мужчинам
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Женщинам
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Детям
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") SALE
+        ul.footer-nav__list Компания
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") О нас
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Блог
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Вакансии
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Контакты
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Магазины
+        ul.footer-nav__list Помощь
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Вопрос-ответ
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Доставка и оплата
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Отзывы
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Служба поддержки
+          li.footer-nav__item
+            a.footer-nav__reference(href="#") Обмен и возврат
+        .subscribe-and-payment-wrapper
+          form.subscribe
+            h3.visually-hidden Оформление подписки
+            label.subscribe__label(for="e-mail") Подпишитесь на нашу рассылку и получите постоянную скидку 10% на все товары, включая новые коллекции
+            input.subscribe__input(type="e-mail" id="e-mail" name="email" placeholder="Введите e-mail")
+          .payment
+            h3.visually-hidden Оплата
+            p.payment__text Способы оплаты
+            a.payment__card.payment-card(href="#")
+              span.visually-hidden Карта виза
+              img.payment-card--photo(src="" title="Карта виза")
+            a.payment__card(href="#")
+              span.visually-hidden Карта мастеркард
+              img.payment-card--photo(src="" title="Карта мастеркард")
+            a.payment__card(href="#")
+              span.visually-hidden Карта ApplePay
+              img.payment-card--photo(src="" title="Карта ApplePay")
+            a.payment__card(href="#")
+              span.visually-hidden Карта ApplePay
+              img.payment-card--photo(src="" title="Карта Yandex")
+      .footer-socials--wrapper
+        .footer-socials__rights-politics.rights
+          hr.rights__line
+          p.rights__text Edison Shoes © 2021 Все права защищены
+        ul.footer-socials__list
+          span.visually-hidden Социальные сети
+          li.footer-socials__item.item-social
+            a.item-social__reference(href="#")
+              span.visually-hidden Фейсбук
+              img.item-social__image(src="" width="40px" height="40px" title="Фейсбук")
+          li.footer-socials__item.item-social
+            a.item-social__reference(href="#")
+              span.visually-hidden Вконтакте
+              img.item-social__image(src="" width="40px" height="40px" title="Вконтакте")
+          li.footer-socials__item.item-social
+            a.item-social__reference(href="#")
+              span.visually-hidden Инстаграм
+              img.item-social__image(src="" width="40px" height="40px" title="Инстаграм")
+          li.footer-socials__item.item-social
+            a.item-social__reference(href="#")
+              span.visually-hidden Твиттер
+              img.item-social__image(src="" width="40px" height="40px" title="Твиттер")
+          li.footer-socials__item.item-social
+            a.item-social__reference(href="#")
+              span.visually-hidden Одноклассники
+              img.item-social__image(src="" width="40px" height="40px" title="Одноклассники")
+        .footer-socials__rights-politics.politics
+          hr.politics__line
+          p.politics__text Политика конфиденциальности
+
+

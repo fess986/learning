@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Open Sans"),local("OpenSans"),url(../fonts/opensans.woff2) format("woff2"),url(../fonts/opensans.woff) format("woff")
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("Open Sans Bold"),local("OpenSans-Bold"),url(../fonts/opensansbold.woff2) format("woff2"),url(../fonts/opensansbold.woff) format("woff")
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden
+}
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  min-height: 52px;
+  text-transform: uppercase;
+  background-color: #fff;
+  cursor: pointer
+}
+.button:hover {
+  color: #fff
+}
+.button:active {
+  color: rgba(255,255,255,.3)
+}
+/*# sourceMappingURL=../css/style.css.map */
