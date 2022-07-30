@@ -1,0 +1,18 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "nodeJS learning",
+  "main": "index.js",
+  "scripts": {
+    "start": "node http.js",
+    "dev": "nodemon http.js"
+  },
+  "author": "karpov maxim <fess986@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

@@ -1,0 +1,17 @@
+$red: #FF0741;
+
+@mixin size {
+    font-size: 30px;
+}
+
+
+.sass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        @include size;
+        color: $red;
+    }
+}

@@ -1,0 +1,29 @@
+/* ~ - используется для подключения пакетов из нод модулей */
+/* @import '~normalize.css';   */
+@import "roboto.css";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding-top: 2rem;
+    min-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.logo {
+    background-image: url("../assets/webpack-logo.png");
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.pre {
+    color:blue;
+}

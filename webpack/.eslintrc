@@ -1,0 +1,16 @@
+{
+    "parser": "babel-eslint",
+
+    "rules": { 
+     "no-unused-vars":"warn"  // тут прописываем свои правила. warn означает предупреждение при сборке, а не ошибку
+    },
+
+    "env" : {
+        "es6" : true,
+        "browser" : true
+    },
+
+    "extends" : [
+        "eslint:recommended"
+    ]
+}
