@@ -146,7 +146,7 @@ delete myDog.tails;  // удаление свойств
 console.log(myDog.hasOwnProperty('name'));  //  поиск наличия свойства по ключу
 console.log(Object.hasOwn(myDog, 'name'));  // более современный и универсальный способ чем hasOwnProperty. Исправляет возможную проблему, если у myDog стерлись прототипы
 Object.getOwnPropertyNames, Object.getOwnPropertySymbols, Object.getOwnPropertyDescriptors  // так же помогают в разных ситуациях
-
+Object.getOwnPropertyDescriptors([].__proto__); //
 console.log(myMusic[0].formats[1]);  //доступ к сложному объекту
 
 let search = elem => myDog[elem];  //функция поиска элемента по ключу

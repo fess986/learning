@@ -3,7 +3,7 @@ interface Person {
     age: number;
 }
 
-type PersonKeys = keyof Person // 'name' | 'age'
+type PersonKeys = keyof Person // 'name' | 'age'. Таким образом мы запрещаем другие виды ключей, так как если так н сделать, можно будет добавлять любые левые ключи в объект этого типа. Если мы хотим из объекта-константы распарсить точный тип, используем связку : keyof (typeof объект-константа)
 
 let pers: PersonKeys = 'name';
 pers = 'age';
