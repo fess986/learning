@@ -1,68 +1,39 @@
-const L = 20;   // длинна стола
-const N = 10;   // количество носков
-const M = 8;   // наблюдения
+const searchingFile = '2.avi';
 
-const socksCoordinates = [[1,5], [18,20], [3,8], [4,7], [6,10], [7,11], [11,19], [12,17], [12,16], [2,3]]
+const fileSystem = `emoh
+ vonavi
+  a.doc
+  b.doc 
+ vortep
+  .bashrc
+ vorodis
+  onrop
+   1.avi
+   2.avi 
+rav
+ bil`
 
-const tests = [1, 3, 5, 8, 10, 13, 17, 20];
+ // сделаем массив из элементов по разделителю строки
+ fileSystemArray = fileSystem.split('\n')
+ // сделаем вариант массива элементов без пробелов
+ const fileSystemArrayNoSpaces = fileSystemArray.map(element => element.trim());
+ // находим индекс нашего искомого файла
+ const index = fileSystemArrayNoSpaces.indexOf(searchingFile);
+ // ищем количество пробелов файла(другими словами глубину вложенности)
+let numberOfSpaces = fileSystemArray[index].trimRight().length - searchingFile.length;
 
-let results = [];
-let socksCount = [];
+let path = searchingFile;
+let calculatedSpaces = 0;
 
-const startSock = 1;
-const endSock = 3;
-const testSock = 2;
+// идем по вверх по массиву от искомого элемента до корня, при этом выходя на уровень выше - убираем один пробел
+for (let i = index - 1; i >=0; i--) {
+    calculatedSpaces = fileSystemArray[i].trimRight().length - fileSystemArrayNoSpaces[i].length;
+    if ((numberOfSpaces - 1) === calculatedSpaces) {
+        path = `${fileSystemArrayNoSpaces[i]}/${path}`;
+        numberOfSpaces = numberOfSpaces - 1;
+}}
 
+// добавляем начальный "/"
+path = `/${path}`
 
-for (let i = 0; i < socksCoordinates.length; i++) {
-    console.log(socksCoordinates[i]);
-    socksCount.push([socksCoordinates[i][0], startSock]);
-    socksCount.push([socksCoordinates[i][1], endSock]);
-}
-
-for (let i = 0; i < tests.length; i++) {
-    console.log(socksCoordinates[i]);
-    socksCount.push([tests[i], testSock]);
-}
-
-const sortDoubleArray = (a, b) => {
-  if (a[0] > b[0]) {
-    return 1;
-  }
-  if (a[0] < b[0]) {
-    return -1;
-  }
-  if (a[0] === b[0]) {
-    if (a[1] > b[1]) {
-        return 1;
-    }
-    if (a[1] < b[1]) {
-        return -1;
-    }
-    return 0;
-  }
-}
-
-socksCount.sort(sortDoubleArray)
-console.log(socksCount)
-
-let count = 0;
-
-for (let i = 0; i < socksCount.length; i++) {
-    console.log(socksCount[i])
-    if (socksCount[i][1] === 1) {
-        count++
-    } 
-
-    if (socksCount[i][1] === 2) {
-        results.push(count)
-    } 
-
-    if (socksCount[i][1] === 3) {
-        count--
-    } 
-    console.log(count)
-}
-
-console.log(results);
-
+console.log(path)
