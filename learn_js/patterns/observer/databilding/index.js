@@ -12,8 +12,8 @@ const dataBilding = {
 
     set value(newValue) {
         this._value = newValue;
-        output.textContent = newValue;
-        input.value = newValue;
+        output.textContent = this._value;
+        input.value = this._value;
         console.log(output)
     },
 }
@@ -25,4 +25,5 @@ input.addEventListener('input', (evt) => {
 button.addEventListener('click', () => {
   dataBilding.value = 'hiiiiiiiiiii';
 })
+
 

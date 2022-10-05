@@ -25,7 +25,7 @@ const observer = {
 
 }
 
-const fn1 = () => {
+const fn1 = (a) => {
     console.log('fn1');
 }
 
@@ -37,13 +37,15 @@ const fn3 = () => {
     console.log('fn3');
 }
 
+// добавляем и удаляем функции для обработки
 observer.addObserver(fn1);
 observer.addObserver(fn2);
 observer.addObserver(fn3);
 
 observer.removeObserver(fn2);
 
+// навешиваем обсерверы на кнопку
 button.addEventListener('click', (evt) => {
-  observer.handler();
+  observer.notify();
 })
 
