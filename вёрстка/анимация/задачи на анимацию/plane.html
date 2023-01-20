@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        img {
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        #flyjet {
+            width: 40px;
+            /* -> 400px */
+
+            height: 24px;
+            /* -> 240px */
+
+            /* можно перечислить все изменяемые свойства с параметрами анимации через запятую, или если меняются все свойства, прописать all */
+            /* transition: width 3s, height 3s; */
+            transition: all 3s cubic-bezier(0.42, 0, .5, 2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="flyjet" src="https://en.js.cx/clipart/flyjet.jpg">
+
+    <script>
+        console.log('ass')
+        const plane = document.querySelector('#flyjet')
+        plane.addEventListener('click', (evt) => {
+
+            // меняем напрямую значению ширины и высоты. Другим способом было бы добавление класса #flyjet.growing {width: 400px; height: 240px;}
+            plane.style.width = '400px';
+            plane.style.height = '240px';
+
+            // код по выполнению (transitionend) запускается столько раз, сколько менялось свойств анимации, чтобы избежать этих дублей, удаляем листнер после первого запуска. Другим способом было бы просто флаг-проверку добавить
+            const endAnamation = () => {
+                alert('ready!');
+                plane.removeEventListener('transitionend', endAnamation)
+            }
+
+            plane.addEventListener('transitionend', endAnamation)
+        })
+    </script>
+</body>
+
+</html>

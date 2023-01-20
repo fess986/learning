@@ -17,7 +17,7 @@ const numberArrray2: Array<number> = [1, 1, 2, 3, 5, 8, 13] // дженерик
 
 const wordArray: string[] = ['hi', 'fi']
 
-// Tuple
+// Tuple, кортеж
 const contact: [string, number] = ['Fess', 123456]
 
 // Any - позволяет работать как с обычной переменной, у котороё нет определенного типа
