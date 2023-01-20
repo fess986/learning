@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .circle {
+            position: fixed;
+            background-color: red;
+            border-radius: 50%;
+
+            width: 0px;
+            height: 0px;
+
+        }
+
+        .circle.animate {
+            /* перемещаем центр круга на 50% отностительно изначального положения */
+            transform: translateX(-50%) translateY(-50%);
+            transition: width 3s, height 3s;
+            /* transition: width 3s, height 3s, transform 3s; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="button">showSircle</button>
+    <div class="circle"></div>
+
+    <script>
+
+        const button = document.querySelector('#button');
+        const circle = document.querySelector('.circle');
+
+        const showSircle = (cx, cy, radius) => {
+            console.log(radius)
+
+            circle.style.top = cx+'px'
+            circle.style.left = cy+'px'
+            
+            circle.style.width = radius*2+'px'
+            circle.style.height = radius*2+'px'
+
+            circle.classList.add('animate')
+       
+        }
+
+          document.addEventListener('click', (evt) => {
+          console.log(evt);
+        })
+
+        button.addEventListener('click', () => {
+            showSircle(150,150,100);
+            
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+a=$1
+b=$2
+str=$3
+
+res=$(($a+$b))
+res1=$((15+17))
+
+echo "$a $b"
+echo $a+$b
+echo $res
+echo $res1
+echo $str
