@@ -4,13 +4,15 @@ const fs = require('fs').promises
 
 const app = express()
 
+console.log('hi!')
+
 app.set('view engine', 'ejs')
 app.set('views', path.resolve(__dirname, 'pages'))
 
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
-const port = process.env.PORT ?? 3000
+const port = process.env.PORT ?? 3000  // проверяем, есть ли в окружении переменная PORT, и если ее нет, то по умолчанию ставим порт 3000
 const logsPath = path.resolve(__dirname, 'data', 'logs.txt')
 
 app.get('/', async (req, res) => {
