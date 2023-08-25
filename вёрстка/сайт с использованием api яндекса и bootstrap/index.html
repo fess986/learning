@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Задача</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+          crossorigin="anonymous">
+</head>
+<body>
+
+    <form id="form" onsubmit="postRequest()">
+        <p class="text-center">Тестовый образец!</p>
+
+        <div class="route mb-3 d-flex flex-column">
+
+            <label class="form-label">
+                Откуда:
+            </label>
+            <input 
+                id="labelPick"
+                name="pick_up"
+                type="text"
+                class="form-control"
+                onblur=""
+                value=""
+            >
+
+            <label class="form-label">
+                Куда:
+            </label>
+            <input 
+                id="labelDrop validationServer02"
+                name="drop_to"
+                type="text"
+                class="form-control"
+                onblur=""
+                value=""
+            >
+
+        </div>
+
+        <button 
+            id="btnRequest"
+            type="submit"
+            class="btn btn-primary"
+        >
+            Submit
+        </button>
+    </form>
+
+    <div class="containerCards">
+        <div class="card mb-3">
+            <div 
+                id="mapWay"
+                class="card-img-top"
+                style="width:100%; height:350px;"
+            >
+            </div>
+            <div class="card-body">
+                <p id="departure" class="card-text">
+                    Откуда: 
+                </p>
+                <p id="destination" class="card-text">
+                    Куда: 
+                </p>
+                <p class="card-text">
+                    <small class="text-muted">
+                        Дата создания: 
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -25,6 +25,11 @@ let variable: any = 42
 variable = 'str'  // ошибки нет
 variable = []
 
+// unknown - супер тип, который охватывает все типы. нужен когда, например, мы получаем входные данные с сервера
+let variable2: unknown = 42
+variable = 'str'  // ошибки нет
+variable = []
+
 // ФУНКЦИИ -----------------
 // ничего не возвращают
 function sayName(name: string): void {
@@ -32,7 +37,7 @@ function sayName(name: string): void {
 }
 sayName('ass');
 
-// never - используется когда функция точно выдаст ошибку или если она никогда не закончится
+// never - используется когда функция точно выдаст ошибку или если она никогда не закончится. Так же нужен когда мы хотим что то запретить в дженерике
 function throwError(message: string): never {
     throw new Error(message);
 }
@@ -56,4 +61,44 @@ const id2: ID = '123';
 // null/undefined
 type SomeType = string | null | undefined 
 // при компиляции типы исчезают. Нужны чисто для разработки
+
+////////////////////////
+type props2 = {
+    class: string,
+    count: number,
+    size: "L"
+}
+
+const props2 : props2 = {
+    'class' : '5',
+    // '1234' : 5, // ошибка, так как такого нет в типе
+    count : 15, // всё равно строка
+    // size : 'M', // шибка должно быть именно "L"
+    size: "L"
+}
+
+////////////////////////
+type props3 = {
+    [key123 : string] : number;
+    // 'count': string,  // нельзя переопределить?
+}
+
+const props3 : props3 = {
+    '123' : 5,
+    '1234' : 5,
+    5 : 15, // всё равно строка
+}
+
+//////////////////////// -in-
+type Mapped = 'big' | 'small'
+
+type props5 = {
+    [key1 in Mapped] : number; // берутся все варианты из Mapped. 
+}
+
+const props5 : props5 = { // нужно именно все ключи из Mapped
+    'big' : 5,
+    'small' : 4,
+    // 'count': 5,
+}
 
