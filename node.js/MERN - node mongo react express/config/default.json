@@ -1,0 +1,6 @@
+{
+  "port" : "5000",
+  "jwtSecret" : "fess secret for token",
+  "mongoUri" : "mongodb+srv://fess986:qgqYSBhZyh9X43LN@cluster0.ddkgbn3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  "baseUrl" : "http://localhost:5000" 
+}

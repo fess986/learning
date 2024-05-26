@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],  // то что будет использоваться в проекте, для того чтобы ТС нам помогал
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",  // говорим что собирать будет не ТС а в данном случае vite
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,  // не позволяет собрать проект, если есть ошибки ТС. "build": "tsc && vite build",
+
+    /* Linting */
+    "strict": true,  // вместо true можно передавать объект с настройками, которые могут ограничивать функционал ТС, но тогда теряется смысл всей движухи
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]  // точка входа для сборки - там где будут работать проверки ТС, соответственно в данном конфиге мы можем в корне создавать файлы, которые не будут анализироваться
+}

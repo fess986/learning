@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script> <!-- плавная прокрутка -->
+
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <!-- классы wrapper и content - технические(можно называть и по другому). Нужны для того чтобы использовать библиотеку gsap для плавной прокрутки. Оборачиваем прокручиваемый контент ими  -->
+    <div class="wrapper">
+        <div class="content">
+            <header class="main-header">
+                <div class="layers">
+                    <div class="layer-text">
+                        <div class="layer-text__title">Welcome to Parralax</div>
+                        <div class="layer-text__message">Fairy forest</div>
+                    </div>
+                    <!-- иногда бэкграунды лучше прописать в хтмл, а не ксс. связано с поддержкой -->
+                    <div class="layer layer-base" style="background-image: url(img/layer-base.png)"></div>
+                    <div class="layer layer-middle" style="background-image: url(img/layer-middle.png)"></div>
+                    <div class="layer layer-front" style="background-image: url(img/layer-front.png)"></div>
+                </div>
+            </header>
+
+            <article class="main-article" style='background-image: url(img/dungeon.jpg)'>
+                <div class="main-article__content">
+                    <h2 class="main-article__title">Something else</h2>
+                    <p class="main-article__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                        pariatur perferendis recusandae nemo
+                        doloremque id, ex a dolorem eaque voluptates. Nihil alias qui ducimus enim? Veniam est quasi
+                        consectetur
+                        deleniti!</p>
+                </div>
+                <div class="main-article__copyright">copyright by me!</div>
+            </article>
+        </div>
+    </div>
+
+</body>
+
+</html>

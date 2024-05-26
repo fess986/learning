@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Работа со службой Web Socket</h1>
+  <div id="output">Статус работы с сокетом</div>
+  <div style="display: flex;">
+    <button id="on">Включить работу с web sockets</button>
+    <button id="off">Выключить работу с web sockets</button>
+  </div>
+  <h1>Отправка сообщений в службу web Socket</h1>
+  <form id="form" action="#" method="post">
+    <textarea id="message" name="" cols="30" rows="10" placeholder="введите сообщение для отправки" style="display: block;" required></textarea>
+    <button type="submit">Отправить сообщение в web Socket</button>
+  </form>
+
+  <h1>Принятые от сервера сообщения</h1>
+  <ul id="list"></ul>
+  
+</body>
+
+<script src="app.js"></script>
+
+
+</html>

@@ -1,0 +1,43 @@
+<h2>Todos Page</h2>
+
+{{#if todos.length}}
+
+	<p>есть тудушки</p>
+
+	<ul>
+
+		{{#each todos}}
+			<li class="todo">
+				<form action="/complete" method="POST">
+					<label>
+						{{#if completed}}
+
+							<input type="checkbox" name="completed" checked />
+							<span class="completed">{{title}}</span>
+
+						{{else}}
+
+							<input type="checkbox"  name="completed"/>
+							<span>{{title}}</span>
+
+						{{/if}}
+					</label>
+
+          <input type="hidden" name="id" value="{{_id}}">  
+
+					<button class="btn btn-small" type="submit">Save todo</button>
+				</form>
+			</li>
+		{{/each}}
+	</ul>
+
+{{else}}
+
+	<p>No todos yet</p>
+
+{{/if}}
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+	M.updateTextFields(); });
+</script>

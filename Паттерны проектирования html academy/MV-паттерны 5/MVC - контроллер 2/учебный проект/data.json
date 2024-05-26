@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "rate": "8,5",
+    "img": "hotel-1.jpg",
+    "title": "Amara Resort & Spa",
+    "price": "4000"
+  },
+  {
+    "id": 2,
+    "rate": "8,9",
+    "img": "hotel-2.jpg",
+    "title": "Desert Quail Inn",
+    "price": "3000"
+  },
+  {
+    "id": 3,
+    "rate": "9,2",
+    "img": "hotel-3.jpg",
+    "title": "Villas at Poco Diablo",
+    "price": "2000"
+  },
+  {
+    "id": 4,
+    "rate": "9,2",
+    "img": "hotel-4.jpg",
+    "title": "GreenTree Inn",
+    "price": "3000"
+  }
+]
