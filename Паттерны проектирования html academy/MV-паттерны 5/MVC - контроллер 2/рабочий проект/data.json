@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "monopod-fan.png",
+    "title": "Любительская селфи-палка",
+    "price": "500"
+  },
+  {
+    "id": 2,
+    "img": "monopod-pro.png",
+    "title": "Профессиональная селфи-палка",
+    "price": "1500"
+  },
+  {
+    "id": 3,
+    "img": "monopod-underwater.png",
+    "title": "Непотопляемая селфи-палка",
+    "price": "2500"
+  },
+  {
+    "id": 4,
+    "img": "monopod-follow-me.png",
+    "title": "Селфи-палка «Следуй за мной»",
+    "price": "4900"
+  }
+]

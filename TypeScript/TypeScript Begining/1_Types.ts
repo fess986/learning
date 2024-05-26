@@ -20,6 +20,10 @@ const wordArray: string[] = ['hi', 'fi']
 // Tuple, кортеж
 const contact: [string, number] = ['Fess', 123456]
 
+type TyppleType = readonly string[]  // неизменяемый массив строк
+const tupple123: TyppleType = ['1','2']
+
+
 // Any - позволяет работать как с обычной переменной, у котороё нет определенного типа
 let variable: any = 42
 variable = 'str'  // ошибки нет

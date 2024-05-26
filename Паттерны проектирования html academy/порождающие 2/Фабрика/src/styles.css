@@ -1,0 +1,20 @@
+.card {
+  border: 1px solid black;
+  padding: 25px;
+  margin: 5px 0;
+}
+
+.student {
+  background: gray;
+  color: white;
+}
+
+.teacher {
+  background: black;
+  color: white;
+}
+
+.doctor {
+  background: green;
+  color: white;
+}
